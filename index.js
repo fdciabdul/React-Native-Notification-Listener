@@ -14,7 +14,7 @@ const notificationHandler = async (notification) => {
       const existingData = await AsyncStorage.getItem('notifications');
       const notifications = existingData ? JSON.parse(existingData) : [];
   
-      if (parsedNotification.title && parsedNotification.app === 'id.dana') {
+      if (parsedNotification.title) {
         notifications.push({
           app: parsedNotification.app, 
           title: parsedNotification.title,
